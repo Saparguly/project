@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фитнес</title>
+  <link rel='stylesheet' href='/stylesheets/style.css'>
+</head>
+<body>
+  <h1>Фитнес</h1>
+  <div class="ul2">
+    <ul>
+      <li><a onclick="exercises()">Упражнение</a></li>
+      <li><a onclick="diet()">Диета</a></li>
+      <li><a onclick="stretching()">Растяжка</a></li>
+      <li><a onclick="users()">Войти</a></li>
+    </ul>
+  </div>
+  <form action="/download" method="post">
+    <input type="submit" name="download" hidden>
+  </form>
+  <form action="/exercises" method="post">
+    <input type="submit" name="exercises" hidden>
+  </form>
+  <form action="/diet" method="post">
+    <input type="submit" name="diet" hidden>
+  </form>
+  <form action="/stretching" method="post">
+    <input type="submit" name="stretching" hidden>
+  </form>
+  <form action="/users" method="post">
+    <input type="submit" name="users" hidden>
+  </form>
+      <p><input type="button" onclick="download()" value="download"></p> 
+  <script>
+    function exercises() {
+      document.querySelector('[name="exercises"]').click()
+    }
+    function diet() {
+      document.querySelector('[name="diet"]').click()
+    }
+    function stretching() {
+      document.querySelector('[name="stretching"]').click()
+    }
+    function users() {
+      document.querySelector('[name="users"]').click()
+    }
+    function download() {
+      document.querySelector('[name="download"]').click()
+    }
+    
+  </script>
+</body>
+</html>

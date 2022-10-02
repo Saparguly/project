@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var dietRouter = require('./routes/diet');
 var stretchingRouter = require('./routes/stretching');
 var exercisesRouter = require('./routes/exercises');
+var downloadRouter = require('./routes/download');
 var app = express();
 
 // view engine setup
@@ -26,6 +27,7 @@ app.use('/users', usersRouter);
 app.use('/diet', dietRouter);
 app.use('/stretching', stretchingRouter);
 app.use('/exercises', exercisesRouter);
+app.use('/download', downloadRouter)
 
 
 // catch 404 and forward to error handler
