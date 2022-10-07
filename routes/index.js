@@ -14,8 +14,8 @@ router.post('/diet', function(req, res, next) {
 router.post('/stretching', function(req, res, next) {
   res.redirect('/stretching' );
 });
-router.post('/users', function(req, res, next) {
-  res.redirect('/users' );
+router.post('/sign_in', function(req, res, next) {
+  res.redirect('/sign_in' );
 });
 
 module.exports = router;
