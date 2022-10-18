@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Фитнес</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <h1>Упражнения</h1>
+  <div class="ul2">
+    <ul>
+      <li><a onclick="exercises()">Упражнение</a></li>
+      <li><a onclick="diet()">Диета</a></li>
+      <li><a onclick="stretching()">Растяжка</a></li>
+      <li><a onclick="sign_in()">Войти</a></li>
+    </ul>
+  </div>
+  <p>1. Наклоны головы в стороны<br>
+        Польза: Избавление от болевых ощущений в шее, устранение зажимов. Наклон подключит грудино-ключично-сосцевидные, лестничные мышцы, трапецию.<br>
+Выполнение: Положите ладонь на верхнюю часть головы. Локоть смотрит четко в сторону. Выполняйте плавный медленный наклон, давление руки совсем небольшое. Корпус остается в статичной позе, не опускайте его за головой.<br>
+Первое упражнение <input type="checkbox" name="" id=""> </p>
+<p>2. Вытяжение с руками в замке<br>
+    Польза: Исправление осевой линии позвоночного столба, коррекция осанки, по всему телу идет приятное расслабление. Подключаются мышцы, пролегающие вдоль спины, в этой растяжке для начинающих работают руки, плечи, пресс, ноги.<br>
+Выполнение: Сложите кисти в замок, ладони смотрят вверх. Без рывков поднимите руки над головой, вытягиваясь всем телом. Сохраните прямое положение спины, можно чуть выгнуться. Пятки не отрываются от пола.<br>
+Второе упражнение <input type="checkbox" name="" id=""></p>
+<p>3. Вытягивание рук вперед<br>
+    Польза: Снятие усталости, улучшение осанки, раскрепощение корпуса. В этом упражнении идет растяжка на мышцы спины от шеи и до поясницы, а также на плечевой пояс и руки.<br>
+Выполнение: Сложенные в замок кисти разверните от себя. Голову чуть наклоните, спину в верхней части округлите. Руки мягко тянутся вперед, а все туловище остается статичным. Вытягивайтесь сильнее вперед, еще большее растягивая спину.<br>
+Третье упражнение <input type="checkbox" name="" id="">
+</p>
+  <form action="/exercises" method="post">
+    <input type="submit" name="exercises" hidden>
+  </form>
+  <form action="/diet" method="post">
+    <input type="submit" name="diet" hidden>
+  </form>
+  <form action="/stretching" method="post">
+    <input type="submit" name="stretching" hidden>
+  </form>
+  <form action="/sign_in" method="post">
+    <input type="submit" name="sign_in" hidden>
+  </form>
+  <script>
+    function exercises() {
+      document.querySelector('[name="exercises"]').click()
+    }
+    function diet() {
+      document.querySelector('[name="diet"]').click()
+    }
+    function stretching() {
+      document.querySelector('[name="stretching"]').click()
+    }
+    function sign_in() {
+      document.querySelector('[name="sign_in"]').click()
+    }
+  </script>
+
+</body>
+
+</html>

@@ -5,6 +5,7 @@ class User {
         this.password = password;
     }
 }
+
 class DatabaseManager {
     static addUser(login, password){
         users.push(new User(login, password));

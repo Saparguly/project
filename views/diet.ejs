@@ -17,7 +17,7 @@
       <li><a onclick="sign_in()">Войти</a></li>
     </ul>
   </div>
-  <form action="/download" method="post">
+  <form>
     <input type="submit" name="download" hidden>
   </form>
   <form action="/exercises" method="post">
@@ -46,10 +46,18 @@
     function sign_in() {
       document.querySelector('[name="sign_in"]').click()
     }
-    function download() {
-      document.querySelector('[name="download"]').click()
+     function download() {
+      fetch('http://localhost:3000/download', {
+					method: 'GET',
+				})
+					.then((response) => response.blob())
+					.then((data) => {
+						let a = document.createElement('a');
+						a.href = window.URL.createObjectURL(data);
+						a.download = 'Diet';
+						a.click();
+					});
     }
-    
   </script>
 </body>
 </html>
