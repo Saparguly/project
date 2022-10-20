@@ -11,7 +11,7 @@ class DatabaseManager {
         users.push(new User(login, password));
     }
     static getStatus(login, password){
-        for(const user of users){
+        for(let user of users){
             if(user.login==login && user.password==password)
             return 'user'
             else
