@@ -9,8 +9,10 @@ class User {
 class DatabaseManager {
     static addUser(login, password){
         users.push(new User(login, password));
+        console.log(users);
     }
     static getStatus(login, password){
+        console.log(users);
         for(const user of users){
             if(user.login==login && user.password==password)
             return 'user'
