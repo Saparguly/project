@@ -13,7 +13,7 @@ class DatabaseManager {
     }
     static getStatus(login, password){
         console.log(users);
-        for(const user of users){
+        for(let User of users){
             if(User.login==login && User.password==password)
             return 'user'
             else
