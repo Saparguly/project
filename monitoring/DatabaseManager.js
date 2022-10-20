@@ -14,7 +14,7 @@ class DatabaseManager {
     static getStatus(login, password){
         console.log(users);
         for(const user of users){
-            if(users.login==login && users.password==password)
+            if(user.login==login && user.password==password)
             return 'user'
             else
             return 'none'
