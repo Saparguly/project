@@ -6,7 +6,7 @@ let router = express.Router();
 router.get('/', function (req, res, next) {
   console.log(req.cookies);
   if(req.cookies.id!=undefined && req.cookies.id!=null && DatabaseManager.hasAccess(req.cookies.id))
-    res.redirect("/sign_in");
+    res.redirect("/signin");
   else
     res.render('registration');
 });

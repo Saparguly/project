@@ -4,7 +4,7 @@ let DatabaseManager = require("../monitoring/DatabaseManager");
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-  res.render('sign_in');
+  res.render('signin');
 });
 router.post('/', function (req, res, next) {
   console.log(req.body);
@@ -19,10 +19,10 @@ router.post('/', function (req, res, next) {
        res.redirect("/stretching");
       }
       else
-        res.redirect("/sign_in");
+        res.redirect("/signin");
     }
     else {
-      res.redirect('/sign_in');
+      res.redirect('/signin');
     }
   }
 });

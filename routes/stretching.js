@@ -10,7 +10,7 @@ router.get('/stretching', function (req, res, next) {
     res.render("stretching");
   }
   else
-    res.redirect("/sign_in");
+    res.redirect("/signin");
 });
 
 module.exports = router;
