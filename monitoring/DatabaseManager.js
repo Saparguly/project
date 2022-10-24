@@ -29,11 +29,14 @@ class DatabaseManager {
         users.push(new User(login, password));
     }
     static getStatus(login, password) {
-        for (let user of users)
+        console.log(login, password);
+        for (let user of users) {
+            console.log(user);
             if (user.login == login && user.password == password) {
                 console.log("getStatus: USER!");
                 return 'user'
             }
+        }
         return 'none'
     }
     static setCookieForUser(login, password) {
