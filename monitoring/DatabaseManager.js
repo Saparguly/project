@@ -1,4 +1,4 @@
-let users = [];
+// let users = [];
 class User {
     #login = null;
     #password = null;
@@ -24,13 +24,14 @@ class User {
 }
 
 class DatabaseManager {
+    static #users = [];
     static addUser(login, password) {
         console.log(`addUser: ${login} ${password}!`);
-        users.push(new User(login, password));
+        DatabaseManager.#users.push(new User(login, password));
     }
     static getStatus(login, password) {
         console.log(login, password);
-        for (let user of users) {
+        for (let user of DatabaseManager.#users) {
             console.log(user);
             if (user.login == login && user.password == password) {
                 console.log("getStatus: USER!");
