@@ -25,28 +25,33 @@ class User {
 
 class DatabaseManager {
     static addUser(login, password) {
+        console.log(`addUser: ${login} ${password}!`);
         users.push(new User(login, password));
     }
     static getStatus(login, password) {
         for (let user of users)
-            if (user.login == login && user.password == password)
+            if (user.login == login && user.password == password) {
+                console.log("getStatus: USER!");
                 return 'user'
+            }
         return 'none'
     }
     static setCookieForUser(login, password) {
         for (let user of users)
             if (user.login == login && user.password == password) {
                 user.cookie = makeid(8);
+                console.log(`setCookieForUser: ${user.cookie}!`);
                 return user.cookie;
             }
         return null;
     }
-    static hasAccess(cookie)
-    {
+    static hasAccess(cookie) {
         for (let user of users)
-            if (user.cookie == cookie)
+            if (user.cookie == cookie) {
+                console.log("hasAccess: True!");
                 return true;
-        return false;   
+            }
+        return false;
     }
 }
 function makeid(length) {   //https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
