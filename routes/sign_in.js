@@ -7,6 +7,7 @@ router.get('/', function (req, res, next) {
   res.render('sign_in');
 });
 router.post('/', function (req, res, next) {
+  console.log(req.body);
   if (req.body.login != undefined && req.body.password != undefined) {
     let status = DatabaseManager.getStatus(req.body.login, req.body.password);
     if (status == 'user')
