@@ -1,17 +1,17 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var sign_inRouter = require('./routes/sign_in');
-var dietRouter = require('./routes/diet');
-var stretchingRouter = require('./routes/stretching');
-var exercisesRouter = require('./routes/exercises');
-var downloadRouter = require('./routes/download');
-var registrationRouter = require('./routes/registration');
-var app = express();
+let indexRouter = require('./routes/index');
+let signinRouter = require('./routes/signin');
+let dietRouter = require('./routes/diet');
+let stretchingRouter = require('./routes/stretching');
+let exercisesRouter = require('./routes/exercises');
+let downloadRouter = require('./routes/download');
+let registrationRouter = require('./routes/registration');
+let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/sign_in', sign_inRouter);
+app.use('/signin', signinRouter);
 app.use('/diet', dietRouter);
 app.use('/stretching', stretchingRouter);
 app.use('/exercises', exercisesRouter);

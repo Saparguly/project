@@ -11,41 +11,17 @@
   <h1>Фитнес</h1>
   <div class="ul2">
     <ul>
-      <li><a onclick="exercises()">Упражнение</a></li>
-      <li><a onclick="diet()">Диета</a></li>
-      <li><a onclick="stretching()">Растяжка</a></li>
-      <li><a onclick="sign_in()">Войти</a></li>
+      <li><a href="/exercises">Упражнение</a></li>
+      <li><a href="/diet">Диета</a></li>
+      <li><a href="/stretching">Растяжка</a></li>
+      <li><a href="/signin">Войти</a></li>
     </ul>
   </div>
   <form>
     <input type="submit" name="download" hidden>
   </form>
-  <form action="/exercises" method="post">
-    <input type="submit" name="exercises" hidden>
-  </form>
-  <form action="/diet" method="post">
-    <input type="submit" name="diet" hidden>
-  </form>
-  <form action="/stretching" method="post">
-    <input type="submit" name="stretching" hidden>
-  </form>
-  <form action="/sign_in" method="post">
-    <input type="submit" name="sign_in" hidden>
-  </form>
       <p><input type="button" onclick="download()" value="download"></p> 
   <script>
-    function exercises() {
-      document.querySelector('[name="exercises"]').click()
-    }
-    function diet() {
-      document.querySelector('[name="diet"]').click()
-    }
-    function stretching() {
-      document.querySelector('[name="stretching"]').click()
-    }
-    function sign_in() {
-      document.querySelector('[name="sign_in"]').click()
-    }
      function download() {
       fetch('http://localhost:3000/download', {
 					method: 'GET',
