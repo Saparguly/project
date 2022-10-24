@@ -27,5 +27,6 @@ router.post('/', function (req, res, next) {
       res.redirect('/signin');
     }
   }
+  res.redirect("/registration");
 });
 module.exports = router;
