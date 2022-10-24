@@ -2,11 +2,6 @@ let express = require('express');
 let router = express.Router();
 let DatabaseManager = require("../monitoring/DatabaseManager");
 
-/* GET users listing. */
-router.get('/', function (req, res, next) {
-  console.warn("It is work!");
-  res.render('sign_in');
-});
 router.post('/', function (req, res, next) {
   console.log("sign post method works!");
   console.log(req.body);
@@ -28,5 +23,10 @@ router.post('/', function (req, res, next) {
     }
   }
   res.redirect("/registration");
+});
+/* GET users listing. */
+router.get('/', function (req, res, next) {
+  console.warn("It is work!");
+  res.render('sign_in');
 });
 module.exports = router;
