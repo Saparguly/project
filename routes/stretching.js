@@ -5,7 +5,7 @@ let DatabaseManager = require("../monitoring/DatabaseManager");
 /* GET home page. */
 
 router.get('/stretching', function (req, res, next) {
-  if(req.cookies.id!=undefined && req.cookies.id!=None && DatabaseManager.hasAccess(req.cookies.id))
+  if(req.cookies.id!=undefined && req.cookies.id!=null && DatabaseManager.hasAccess(req.cookies.id))
   {
     res.render("stretching");
   }

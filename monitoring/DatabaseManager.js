@@ -1,12 +1,12 @@
 let users = [];
 class User {
-    #login = None;
-    #password = None;
-    #cookie = None;
+    #login = null;
+    #password = null;
+    #cookie = null;
     constructor(login, password) {
         this.#login = login;
         this.#password = password;
-        this.#cookie = None
+        this.#cookie = null;
     }
     get login() {
         return this.#login;
@@ -39,7 +39,7 @@ class DatabaseManager {
                 user.cookie = makeid(8);
                 return user.cookie;
             }
-        return None;
+        return null;
     }
     static hasAccess(cookie)
     {
