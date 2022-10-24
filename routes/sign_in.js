@@ -12,7 +12,7 @@ router.post('/', function (req, res, next) {
     if (status == 'user')
     {
       let cookie = DatabaseManager.setCookieForUser(req.body.login, req.body.password);
-      if(cookie!=None)
+      if(cookie!=null)
       {
        res.cookie("id", cookie);
        res.redirect("/stretching");

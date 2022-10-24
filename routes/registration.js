@@ -4,6 +4,7 @@ let router = express.Router();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
+  console.log(req.cookies);
   if(req.cookies.id!=undefined && req.cookies.id!=null && DatabaseManager.hasAccess(req.cookies.id))
     res.redirect("/sign_in");
   else
