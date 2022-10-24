@@ -4,6 +4,7 @@ let DatabaseManager = require("../monitoring/DatabaseManager");
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
+  console.warn("It is work!");
   res.render('sign_in');
 });
 router.post('/', function (req, res, next) {
