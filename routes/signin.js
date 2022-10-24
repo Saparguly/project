@@ -4,6 +4,7 @@ let DatabaseManager = require("../monitoring/DatabaseManager");
 
 router.post('/', function (req, res, next) {
   console.log("sign post method works!");
+  console.log("Problem here!");
   // console.log(req.body);
   // if (req.body.login != undefined && req.body.password != undefined) {
   //   let status = DatabaseManager.getStatus(req.body.login, req.body.password);
